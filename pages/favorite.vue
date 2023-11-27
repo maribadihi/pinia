@@ -31,11 +31,12 @@
         <h2 class="w-full mb-4 flex text-center justify-items-center justify-center font-bold text-3xl text-red-500">
             Borders
         </h2>
+    
         <div class="container m-auto">
             <div class="w-full flex flex-wrap">
-                <div v-for="(border, index) in store.borders" :key="index"
+                <div v-for="(country, index) in store.selectedCountries" :key="index"
                     class="basis-1/4 flex justify-center items-center bg-gray-100">
-                    <CardItem :country="border" />
+                    <BorderCard :country="country"/>
                 </div>
             </div>
         </div>

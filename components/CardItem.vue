@@ -16,7 +16,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useFavoriteFlagStore } from '../stores/store'
-const { isInFav, addToFav, removeFromFav ,fetchBorders} = useFavoriteFlagStore()
+const { isInFav, addToFav, removeFromFav } = useFavoriteFlagStore()
 const props = defineProps({
     country: {
         type: Object
@@ -31,7 +31,6 @@ const onCardClick = () => {
         removeFromFav(props.country)
     } else {
         addToFav(props.country)
-        fetchBorders(props.country)
     }
 }
 </script>
